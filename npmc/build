@@ -1,0 +1,7 @@
+#!/bin/ksh
+
+cd ..
+R CMD check npmc
+R CMD build --force npmc
+R CMD INSTALL *gz
+mv npmc*gz packages/
